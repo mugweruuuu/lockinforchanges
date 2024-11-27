@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(135deg, #000000, #121212);
+  color: #00FF7F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased; /* Improve font rendering on Safari */
+}
+
+/* Question Styling */
+.question {
+  font-size: 2rem;
+  text-align: center;
+  color: #00FF7F;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 5px #00FF7F;
+}
+
+/* Timer Styling */
+.timer {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0px 0px 5px #00FF7F;
+  text-align: center;
+}
+
+/* Container Styling */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+
+/* Password Input and Button */
+.password-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.password-input {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #00FF7F;
+  background: transparent;
+  color: #00FF7F;
+  -webkit-appearance: none; /* Avoid default iOS input styles */
+  transition: border-color 0.3s ease;
+}
+
+.password-input.shake {
+  animation: shake 0.5s ease;
+  border-color: #FF0000;
+}
+
+/* Caption Styling */
+.caption {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #00FF7F;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Shaking animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.login-button {
+  background-color: #00FF7F;
+  color: #000000;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #00cc66;
+}
+
+.error-message {
+  color: #FF0000;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .question {
+    font-size: 1.5rem;
+  }
+
+  .timer {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .timer {
+    font-size: 1.5rem;
+  }
+}

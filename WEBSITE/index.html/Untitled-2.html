@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Retro Countdown - Lock In</title>
+
+  <!-- Link to Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Lock-in Page: Password Prompt -->
+  <div class="password-container" id="password-container">
+    <div class="question">Enter Password to Lock In:</div>
+    <input type="password" class="password-input" id="password" placeholder="Enter your password" onkeyup="checkEnter(event)">
+    <button class="login-button" onclick="checkPassword()">Enter</button>
+    <div class="caption">Guess the password. Hint: headboy :)</div>
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <!-- Hidden Countdown Timer -->
+  <div class="container" id="countdown-container" style="display: none;">
+    <div class="question">idk wait i guess 🤷🏾‍♂️</div>
+    <div class="timer" id="countdown">00d 00h 00m 00s</div>
+  </div>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
